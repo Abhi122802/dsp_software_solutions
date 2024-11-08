@@ -1,0 +1,41 @@
+.selectDrop{
+    display: flex;
+    width:8vw;
+    flex-direction: column;
+    height: auto;
+    position: absolute;
+    top: 6vh;
+    left: 18vw;
+    box-shadow: 0 3px 6px rgb(0 ,0 , 0/20%);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.searchField input{
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    border: 1px solid #161616;
+    outline: none;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+.selectDrop .searchResults{
+    /* display: none; */
+    min-width: 10vw;
+    max-width: 20vw;
+    height: 40vh;
+    padding: 1rem;
+    overflow: auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px gray;
+    border-radius: 7px;
+}
+
+.selectDrop .searchResults li{
+    font-size: 14px;
+    width: 100%;
+    padding-bottom: 1rem;
+}

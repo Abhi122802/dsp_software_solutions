@@ -1,0 +1,53 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
+.homeSlider{
+    padding: 30px 0px;
+}
+.home_slider_Main{
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.homeSlider{
+    z-index: 2;
+}
+
+.home_slider_Main button{
+    position: absolute;
+    top: 47%;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: #f2f3f4!important;
+    z-index: 1000 !important;
+    transition: all 0.2 ease-in-out;
+}
+
+.slick-next{
+    right: 20px !important;
+}
+.slick-prev{
+    left: 9px !important;
+}
+
+.slick-next:before{
+    content: "\f105" !important;
+    font-family: FontAwesome !important;
+    font-size: 25px !important;
+    color: #000 !important;
+}
+
+.slick-prev:before{
+    content: "\f104" !important;
+    font-family: FontAwesome !important;
+    font-size: 25px !important;
+    color: #000;
+}
+
+.home_slider_Main button:hover{
+    background: #97896e !important;
+}
+.home_slider_Main button::before{
+    color: #0e0d0d !important;
+}
