@@ -11,7 +11,7 @@ const Nav =()=>{
     return(
         <div className="nav">
             <div className="container-fluid">
-                <div class="row position-relative">
+                <div className="row position-relative">
                     <div className="col-sm-2 part1 d-flex align-items-center">
                         <Button className="bg-g catTab "><AppsIcon/>BROWSE ALL CATEGORIES<KeyboardArrowDownRoundedIcon/></Button>
                     </div>  
@@ -19,7 +19,8 @@ const Nav =()=>{
                         <nav>
                             <ul className="list list-inline">
                                 <li className="list-inline-item">
-                                    <Button><Link>Home<KeyboardArrowDownRoundedIcon/></Link></Button>                                <div class="dropdown_menu d-flex align-items-center">
+                                    <Button><Link>Home<KeyboardArrowDownRoundedIcon/></Link></Button>                                
+                                    <div className="dropdown_menu d-flex align-items-center">
                                     <ul className="menu">
                                         <li><Button><Link to ="/about">About Us</Link></Button></li>
                                         <li><Button><Link to ="/about">Contact</Link></Button></li>
@@ -29,7 +30,7 @@ const Nav =()=>{
                                 </li>
                                 <li className="list-inline-item">
                                     <Button><Link>About <KeyboardArrowDownRoundedIcon/></Link></Button>
-                                    <div class="dropdown_menu d-flex align-items-center">
+                                    <div className="dropdown_menu d-flex align-items-center">
                                     <ul className="menu">
                                         <li><Button><Link to ="/about">About Us</Link></Button></li>
                                         <li><Button><Link to ="/about">Contact</Link></Button></li>
@@ -46,7 +47,7 @@ const Nav =()=>{
                                 </li> 
                                 <li className="list-inline-item">
                                     <Button><Link>Shop<KeyboardArrowDownRoundedIcon/></Link></Button>
-                                    <div class="dropdown_menu d-flex align-items-center">
+                                    <div className="dropdown_menu d-flex align-items-center">
                                     <ul className="menu">
                                         <li><Button><Link to ="/about">About Us</Link></Button></li>
                                         <li><Button><Link to ="/about">Contact</Link></Button></li>
@@ -109,7 +110,7 @@ const Nav =()=>{
                                 </li>
                                 <li className="list-inline-item">
                                 <Button><Link>pages<KeyboardArrowDownRoundedIcon/></Link></Button>
-                                <div class="dropdown_menu d-flex align-items-center">
+                                <div className="dropdown_menu d-flex align-items-center">
                                     <ul className="menu">
                                         <li><Button><Link to ="/about">About Us</Link></Button></li>
                                         <li><Button><Link to ="/about">Contact</Link></Button></li>
@@ -126,7 +127,7 @@ const Nav =()=>{
                                 </li>
                                 <li className="list-inline-item">
                                     <Button><Link>contact<KeyboardArrowDownRoundedIcon/></Link></Button>
-                                    <div class="dropdown_menu d-flex align-items-center">
+                                    <div className="dropdown_menu d-flex align-items-center">
                                     <ul className="menu">
                                         <li><Button><Link to ="/about">About Us</Link></Button></li>
                                         <li><Button><Link to ="/about">Contact</Link></Button></li>
@@ -140,14 +141,14 @@ const Nav =()=>{
                         </nav>
                     </div>
                     <div className="col-sm-1 part3 d-flex align-items-center">
-                        <div class="phno d-flex align-items-center ml-auto">
+                        <div className="phno d-flex align-items-center ml-auto">
                             <span><HeadsetMicIcon/></span>
-                            <div class="info ml-3">
-                                <h3 class="text-g mb-0">
-                                    +91-9673391008
-                                    </h3>
+                            <div className="ml-3">
+                                <h3 className="text-g mb-0">
+                                        +91-9673391008
+                                </h3>
                                 <p className="mb-0">24/7 Support center</p>
-                            </div>
+                            </div>      
                         </div>
                     </div>
                 </div>

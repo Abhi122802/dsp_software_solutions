@@ -1,6 +1,9 @@
 import React from "react";
 import '../selectDrop/select.css';
-const select=()=>{
+import { useAppContext } from "../../context/Appcontext/AppContext.js";
+const Select=()=>{
+    const { setCurrentCategory, categoryList } = useAppContext();
+
     return(
        <div className="selectDrop">
             <div className="searchResults">
@@ -8,15 +11,12 @@ const select=()=>{
                 <input type="text"/>    
             </div>
                 <ul>
-                    <li>camera</li>
-                    <li>Bill software</li>
-                    <li>bill machine</li>
-                    <li>john doe</li>
-                    <li>printer</li>
-                    <li>eor</li>
+                    {categoryList.map((category)=>{
+                        return (<li onClick={()=>{setCurrentCategory(category)}}>{category}</li>)
+                    })}
                 </ul>
             </div>    
        </div>
     )
 }
-export default select;
+export default Select;

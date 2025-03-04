@@ -1,0 +1,109 @@
+/* .listingData .row .rightContent{
+  max-width: 75%;
+} */
+
+.ut:hover{
+  color: #28a745;
+
+}
+.tabbutton{
+  margin-left: 780px;
+  
+  
+}
+
+.listingPage .listingData .row .homeProducts .productRow .item {
+  width: 20%;
+  padding: 5px 5px;
+}
+
+/* ll*/
+.topStrip {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.topStrip p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.topStrip .text-success {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.tabbutton {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tab_ {
+    position: relative;
+    width: 100px;
+}
+
+.tab_ .btn_ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tab_ .btn_:hover {
+    background-color: #f1f1f1;
+}
+
+.tab_ .dropdownMenu1 {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.tab_:hover .dropdownMenu1 {
+    display: block;
+}
+
+.dropdownMenu1 li {
+    list-style: none;
+}
+
+.dropdownMenu1 li .align-items-center {
+    display: flex;
+    justify-content: center;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdownMenu1 li .align-items-center:hover {
+    background-color: #f8f9fa;
+}
+

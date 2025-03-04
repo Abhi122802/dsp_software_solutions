@@ -1,0 +1,244 @@
+.breadcrumbWrapper {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.breadcrumb2 {
+    background: none;
+    padding: 10px 10px !important;
+}
+
+ul.breadcrumb2 {
+    padding: 10px 14px;
+    list-style: none;
+    background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb2 li {
+    padding: 10px;
+    display: inline;
+    font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb2 li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb2 li a {
+    color: #3bb77e;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb2 li a:hover {
+    color: #3bb77e;
+    text-decoration: underline;
+}
+
+.productName{
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.priceLarge{
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.text-org {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text-gray{
+    font-size: 30px;
+    padding-left: 10px;
+    font-weight: 600;
+    color: #303030a2;
+}
+
+.productInfo{
+    padding: 50px;
+}
+.productInfo p{
+    font-size: 14px;
+}
+/* 
+.adv{
+    width: auto;
+    height: auto;
+} */
+.productZoom{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.zoomSlider{
+    padding-top: 30px;
+}
+.zoomSlider .slick-slide{
+    padding-right: 15px !important;
+}
+
+.zoomSlider .item{
+    border: 1px solid transparent;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+.zoomSlider .slick-current .item{
+    border: 2px solid #3bb77e;
+
+}
+.zoomSlider *{
+    outline: none !important;
+}
+.zoomSlider .slick-arrow{
+    top: 50% !important;
+    zoom: 80% !important;
+}
+.zoomSlider .slick-arrow .slick-next{
+    right: -5px;
+}
+.zoomSlider .slick-arrow .slick-prev{
+    left: -5px;
+}
+.detailsContainer{
+    max-width: 85%;
+    padding: 30px 0px;
+}
+
+.productSize{
+    width: 100%;
+    height: auto;
+    padding: 25px 0px;
+}
+.productSize ul li{
+    margin-right: 15px !important;
+}
+
+
+/* Product Zoom Section */
+.productZoom {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .productZoom img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .zoomSlider .item {
+    padding: 5px;
+  }
+  
+  .zoomSlider .item img {
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+  }
+  
+  .zoomSlider .item img.active-thumbnail {
+    border: 2px solid #007bff;
+  }
+  
+.productSize ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px !important;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3 ease-in-out;
+}
+.productSize ul li a.active{
+    background:  #3bb77e !important ;
+    color: #fff !important;
+}
+
+
+.addCartSection{
+    width: 100%;
+    height: auto;
+}
+.addCartSection .counterSec{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #3bb77e !important;
+    overflow: hidden;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+  
+.addCartSection .counterSec input{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    border: 0px;
+    outline: none !important;
+    text-align: center;
+}
+.addCartSection .counterSec{
+    position: relative;
+}
+.addCartSection .counterSec .arrow{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.addCartSection .counterSec .arrow.plus{
+    top: -2px;
+    right: 10px;
+}
+.addCartSection .counterSec .arrow.minus{
+    bottom:-2px;
+    right: 10px;
+}
+
+.addtocartbtn svg{
+    font-size: 28px !important;
+}
+.addCartSection button{
+    height: 50px;
+    margin-left: 10px;
+    max-width: inherit !important;
+}
+.addCartSection button svg{
+    font-size: 30px !important;
+}
+.zoomSliderBig{
+    width: 100%;
+}

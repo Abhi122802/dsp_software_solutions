@@ -1,92 +1,113 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import '../header/header.css';
-import Select from '../selectDrop/select';
-import Nav from '../header/nav/nav';
+import Select from '../selectDrop/select.js';
+import Nav from '../header/nav/nav.js';
+
 
 
 import Logo from '../../assets/images/Logo.svg';
 import SearchIcon from '@mui/icons-material/Search';
-import LocationDropDown from "../LocationdropDown/LocationDropDown";
+import LocationDropDown from "../LocationdropDown/LocationDropDown.js";
 import Avatar from '@mui/material/Avatar';
 import CART from '../../assets/images/shopping-cart.png';
+import { useAppContext } from "../../context/Appcontext/AppContext.js";
 
 
-const Header =()=>{
-    const [ showCategories, setshowCategories ] = useState(false)
-    const [ showLocations, setShowLocations ] = useState(false)
+const Header = () => {
+    const [showCategories, setshowCategories] = useState(false)
+    const [showLocations, setShowLocations] = useState(false)
+    const { Currentcategory, currentLocation } = useAppContext();
+    const headerRef = useRef();
 
-    useEffect(()=>{
-        const hideCategories = ()=>{
+    useEffect(() => {
+        const hideCategories = () => {
             setshowCategories(false);
         }
-        if(showCategories){
-            document.addEventListener("click",hideCategories);
-        }else{
+        if (showCategories) {
+            document.addEventListener("click", hideCategories);
+        } else {
             document.removeEventListener("click", hideCategories);
         }
 
-        return(
-            ()=>{
-                document.removeEventListener("click",hideCategories);
+        return (
+            () => {
+                document.removeEventListener("click", hideCategories);
             }
         )
-    },[showCategories])
+    }, [showCategories])
 
-    useEffect(()=>{
-        const hideLocations = ()=>{
+    useEffect(() => {
+        const hideLocations = () => {
             setShowLocations(false);
         }
-        if(showLocations){
-            document.addEventListener("click",hideLocations);
-        }else{
+        if (showLocations) {
+            document.addEventListener("click", hideLocations);
+        } else {
             document.removeEventListener("click", hideLocations);
         }
 
-        return(
-            ()=>{
-                document.removeEventListener("click",hideLocations);
+        return (
+            () => {
+                document.removeEventListener("click", hideLocations);
             }
         )
-    },[showLocations])
+    }, [showLocations])
 
-    const handleCategoriesDropDownClick = (e)=>{
+    const handleCategoriesDropDownClick = (e) => {
         e.stopPropagation();
         setshowCategories(!showCategories)
     }
 
-    const handleLocationsDropDownClick = (e)=>{
+    const handleLocationsDropDownClick = (e) => {
         e.stopPropagation();
         setShowLocations(!showLocations)
     }
 
-    return(
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            let position = window.pageYOffset;
+            if (position > 100) {
+                headerRef.current.classList.add('fixed');
+            } else {
+                headerRef.current.classList.remove('fixed');
+            }
+        })
+
+    }, []);
+
+
+    return (
         <>
-        <header>
-            <div className='header'>
-                    {/*header logo*/}
-                    <div className="logo">
-                        <img src={Logo} alt="Logo"/>
-                    </div>
-                    <div className="filter">
-                        {showCategories && <Select/>}<div onClick={handleCategoriesDropDownClick} className="btn">All Categories {!showCategories && "▼"} {showCategories && "▲"}</div>
-                        <div className="search">
-                            <div className="serachInputBox"><input className="searchInput" type="text" placeholder="Search for item..."/></div>
-                            <div className="searchbutton"><SearchIcon className="searchIcon"/></div>
+        <div className="headerimg" ref={headerRef}>
+            <div className="header1 ">
+                <header>
+                    <div className='header'>
+                        {/* header logo */}
+                        <div className="logo">
+                            <img src={Logo} alt="Logo" />
+                        </div>
+                        <div className="filter">
+                            {showCategories && <Select />}<div onClick={handleCategoriesDropDownClick} className="btn">{(Currentcategory !== null) ? `${Currentcategory}` : `All Categories`} {!showCategories && "▼"} {showCategories && "▲"}</div>
+                            <div className="search">
+                                <div className="serachInputBox"><input className="searchInput" type="text" placeholder="Search for item..." /></div>
+                                <div className="searchbutton"><SearchIcon className="searchIcon" /></div>
+                            </div>
+                        </div>
+                        <div className="locations">
+                            {showLocations && <LocationDropDown />}<div onClick={handleLocationsDropDownClick} className="btn">{currentLocation != null ? currentLocation : "Locations"} {!showLocations && "▼"} {showLocations && "▲"}</div>
+                        </div>
+                        <div className="ShopingCart">
+                            <img src={CART} alt="Cart Logo" />
+                        </div>
+                        <div className="profileBox">
+                            <Avatar alt="Abhishek" src="/static/images/avatar/1.jpg" />
                         </div>
                     </div>
-                    <div className="locations">
-                        {showLocations && <LocationDropDown/>}<div onClick={handleLocationsDropDownClick} className="btn">Locations {!showLocations && "▼"} {showLocations && "▲"}</div>
-                    </div>
-                    <div className="ShopingCart">
-                        <img src={CART} alt="Cart Logo" />
-                    </div>
-                    <div class="profileBox">
-                        <Avatar alt="Abhishek" src="/static/images/avatar/1.jpg" />
-                    </div>
+                </header>
             </div>
-        </header>
 
-        <Nav/>
+            <Nav />
+            </div>
         </>
     )
 }

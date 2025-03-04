@@ -1,6 +1,8 @@
-import React from "react";
+// import React, { useState } from "react";
 import '../LocationdropDown/locationCss.css';
+import { useAppContext } from "../../context/Appcontext/AppContext";
 const LocationDropDown=()=>{
+    const { locationList, setCurrentLocation } = useAppContext();
     return(
        <div className="selectDropLocations">
             <div className="searchResults">
@@ -8,17 +10,9 @@ const LocationDropDown=()=>{
                 <input type="text"/>    
             </div>
                 <ul>
-                    <li>Solapur</li>
-                    <li>Parbani</li>
-                    <li>Kolhapur</li>
-                    <li>Pune</li>
-                    <li>Noida</li>
-                    <li>Mumbai</li>
-                    <li>Osmanabad</li>
-                    <li>Beed</li>
-                    <li>Mumbai</li>
-                    <li>Mumbai</li>
-                    <li>Mumbai</li>
+                {locationList.map((location)=>{
+                        return (<li onClick={()=>{setCurrentLocation(location)}}>{location}</li>)
+                    })}
                 </ul>
             </div>    
        </div>

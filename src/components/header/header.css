@@ -15,7 +15,21 @@ body
     padding: 0;
     height: 7.5vh;
     gap: 1vw;
-    box-shadow: 2px 4px 16px gray;
+    background: #fff;
+}
+.headerimg{
+    transition: all 0.3 ease-in-out;
+    background: #fff;
+}
+
+.headerimg.fixed{
+    position: fixed;
+    top: -60px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+
+
 }
 
 .filter{
@@ -26,6 +40,7 @@ body
     padding: 0.2rem;
     border-radius: 7px;
     height: 100%;
+    z-index: 2;
 }
 
 .logo{
@@ -89,6 +104,7 @@ body
     padding: 0.2rem;
     /* box-shadow: 2px 4px 16px gray; */
     border-radius: 7px;
+        z-index: 2;
 }
 .ShopingCart{
     display: flex;
@@ -100,6 +116,7 @@ body
 .ShopingCart img{
     height: 5vh;
     width: 5vh;
+    
 }
 
 .profileBox{
